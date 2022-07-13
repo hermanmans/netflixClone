@@ -1,4 +1,17 @@
 *{box-sizing: border-box;}
+
 body{
-    background-image:url("Netflix-Background.jpg");
+    background-image:url("/Images/Netflix-Background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+.navbar{
+    background-color:black;
+    width:auto ;
+    color: whitesmoke;
+    display: inline-flex;
+    gap: 100px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif 
+  }
