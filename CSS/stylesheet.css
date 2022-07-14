@@ -11,14 +11,26 @@ body{
     width:100% ;
     color: whitesmoke;
     display: inline-flex;
-    gap: 100px;
+
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif 
+    justify-content:left;
+    font-family: Arial, Helvetica, sans-serif ;
   }
 
-  a{
-    color: whitesmoke;
-  }
-  a:hover{
+a{
+    color:whitesmoke ;
+}
+
+a:hover{
     color:grey ;
+}
+
+#watchlist{
+    padding-left: 100px;
+}
+#search{
+    padding-left: 50%;
+}
+#acoount{
+    padding-left: 50%;
 }
