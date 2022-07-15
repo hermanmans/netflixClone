@@ -14,10 +14,19 @@ body{
     position: relative;
     align-items: center;
     justify-content:left;
-    font-family: Arial, Helvetica, sans-serif ;
+    font-family: Arial;
+    font-size: small;
+    font-weight:100;
 }
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
 #movies{
     color: whitesmoke;
+    margin-left: 5%;
 }
 
 #movies:hover{
@@ -25,20 +34,28 @@ body{
 }
 #watchlist{
     color: whitesmoke;
-    margin-left: 100px;
+    margin-left: 5%;
 }
 #watchlist:hover{
     color:grey ;
 }
+#search{
+    margin-left: 35%;
+}
 #search:hover{
     color:grey ;
+}
+#searchInp{
+    margin-left: 10px;
+}
+#account{
+    margin-left: 30px;
 }
 #account:hover{
     color:grey ;
 }
 
-#search:active{
-    transition: ease-in 2s;
-    display: block;
-    margin-left: 100px;
+.trending{
+    color: red;
 }
+
