@@ -11,31 +11,34 @@ body{
     width:100% ;
     color: whitesmoke;
     display: inline-flex;
-<<<<<<< HEAD
-
-=======
     position: relative;
-    gap: 100px;
->>>>>>> 3007d5f15b7c2d503ba0c9f4355c36d2d6409526
     align-items: center;
     justify-content:left;
     font-family: Arial, Helvetica, sans-serif ;
-  }
-
-a{
-    color:whitesmoke ;
+}
+#movies{
+    color: whitesmoke;
 }
 
-a:hover{
+#movies:hover{
+    color:grey ;
+}
+#watchlist{
+    color: whitesmoke;
+    margin-left: 100px;
+}
+#watchlist:hover{
+    color:grey ;
+}
+#search:hover{
+    color:grey ;
+}
+#account:hover{
     color:grey ;
 }
 
-#watchlist{
-    padding-left: 100px;
-}
-#search{
-    padding-left: 50%;
-}
-#acoount{
-    padding-left: 50%;
+#search:active{
+    transition: ease-in 2s;
+    display: block;
+    margin-left: 100px;
 }
