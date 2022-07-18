@@ -85,4 +85,10 @@ a:visited { text-decoration: none; }
     border-radius: 12%;
 }
 
-
+.container{
+    color: red;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    border: solid 1px white;
+    text-align: center;
+}
