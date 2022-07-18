@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="netflixJS.js" defer></script>
     <script src="https://kit.fontawesome.com/76ccc9430c.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     
     <title>Netflix</title>
 </head>
 <body>
-        <nav class="navbar">
-            <img src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="150px">
-            <a id="movies" href="movies.html"><h4 >Movies</h4></a>
-            <a id="watchlist" href="watchlist.html"><h4 >Watchlist</h4></a>
-            <i class="fa-solid fa-magnifying-glass" id="search"></i><input id="searchInp">
-            <h4 id="account">Account</h4>
-        </nav>
+    <nav class="navbar">
+        <img src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="150px">
+        <a id="movies" href="movies.html"><h4 >Movies</h4></a>
+        <a id="watchlist" href="watchlist.html"><h4 >Watchlist</h4></a>
+        <i class="fa-solid fa-magnifying-glass" id="search"></i><input id="searchInp">
+        <h4 id="account">Account</h4>
+    </nav>
+
+            <h1>Todo List</h1>
+    <div id="myApp">
+        <button v-if="state==='default'" @click="changeState('edit')">Add Items</button>
+        <button v-else="state==='edit'" @click="changeState('default')">Cancel</button>
+        <br><br>
+        <div v-if="state==='edit'">
+            <input type="text" v-model="newItem" v-on:keyup.enter="saveItem"> 
+            <button v-on:click="saveItem" :disabled="newItem.length===0"> <!--disabled used for preventing submissions of blank inputs-->
+                Submit
+            </button>
+            <ul>
+                <li v-for="x in reverseItems" :class="{strikeout:x.done}" @click="toggleStrike(x)">{{x.label}}</li> <!--Class attribute bound to li tag -->
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

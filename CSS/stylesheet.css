@@ -59,3 +59,30 @@ a:visited { text-decoration: none; }
     color: red;
 }
 
+.strikeout{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.login{
+    color: white;
+    background-color: rgb(54, 54, 54);
+    padding: 40px;
+    border-radius: 5%;
+    display:flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10%;
+    align-items: center;
+}
+
+#loginButton{
+    font-weight: 500;
+    background-color: gray;
+    border: solid 1px black;
+    color:whitesmoke;
+    border-radius: 12%;
+}
+
+
