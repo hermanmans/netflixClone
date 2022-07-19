@@ -18,3 +18,5 @@ let moviesObj=JSON.parse(moviesList);
 
 let vueMovieObj = new Vue({
     moviesObj});
+
+console.log(vueMovieObj);
