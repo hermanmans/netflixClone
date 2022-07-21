@@ -1,7 +1,7 @@
 *{box-sizing: border-box;}
 
 body{
-    background-image:url("/Images/Netflix-Background.jpg");
+    background-color: black;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -55,33 +55,29 @@ a:visited { text-decoration: none; }
     color:grey ;
 }
 
-.trending{
-    color: red;
+
+#movieGrid{
+    display: grid;
+    background-color: black;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    gap:2%;
+    text-align: center;
 }
 
-.strikeout{
-    text-decoration: line-through;
-    color: grey;
-}
-
-.login{
+h1{
     color: white;
-    background-color: rgb(54, 54, 54);
-    padding: 40px;
-    border-radius: 5%;
-    display:flex;
-    flex-direction: column;
-    width: fit-content;
-    margin: auto;
-    margin-top: 10%;
-    align-items: center;
+    background-color: black;
+}
+.icon-buttons{
+    color: grey;   
 }
 
-#loginButton{
-    font-weight: 500;
-    background-color: gray;
-    border: solid 1px black;
-    color:whitesmoke;
-    border-radius: 12%;
+#play:hover{
+    color:blue ;
 }
-
+#add:hover{
+    color:blue ;
+}
+#like:hover{
+    color:blue ;
+}
