@@ -1,20 +1,14 @@
-*{box-sizing: border-box;}
-
-body{
-    background-color: black;
-    background-size: cover;
-    background-attachment: fixed;
-}
+*{box-sizing: border-box;
+background-color: black;
+font-family: Arial;}
 
 .navbar{
-    background-color:black;
     width:100% ;
     color: whitesmoke;
     display: inline-flex;
     position: relative;
     align-items: center;
     justify-content:left;
-    font-family: Arial;
     font-size: small;
     font-weight:100;
 }
@@ -58,16 +52,11 @@ a:visited { text-decoration: none; }
 
 #movieGrid{
     display: grid;
-    background-color: black;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    gap:2%;
+    grid-template-columns:repeat(5,[col] 1fr);
+    row-gap: 5%;
     text-align: center;
 }
 
-h1{
-    color: white;
-    background-color: black;
-}
 .icon-buttons{
     color: grey;   
 }

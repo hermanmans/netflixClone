@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/moviesStylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="movies.js" defer></script>
     <script src="https://kit.fontawesome.com/76ccc9430c.js" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+    
     <title>Movies</title>
 </head>
 <body>
@@ -20,13 +21,13 @@
         <h4 id="account">Account</h4>
     </nav>
     <div>
-        <h1>New releases</h1>
+        <h4 style="color: white;">New releases</h4>
         <div id="movieGrid">
             <div class="icon" v-for="x in data" >
-                <img v-bind:src="x.actors[0].image" width="100px" height="120px" alt="">
+                <img v-bind:src="x.image" width=200px height=250px alt="">
                 <div class="icon-buttons">
                     <i class="fa-solid fa-circle-play" id="play"></i>
-                    <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie"></i>
+                    <i class="fa-solid fa-circle-plus" id="add"></i>
                     <i class="fa-solid fa-thumbs-up" id="like"></i>
                 </div>
             </div>
