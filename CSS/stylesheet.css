@@ -47,6 +47,7 @@ a:visited { text-decoration: none; }
 }
 #searchInp{
     margin-left: 10px;
+    color: white;
 }
 #account{
     margin-left: 30px;
