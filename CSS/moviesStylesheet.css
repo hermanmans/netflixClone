@@ -51,7 +51,7 @@ a:visited { text-decoration: none; }
 }
 
 
-#movieGrid{
+#movieGrid,#comingSoonGrid{
     display: grid;
     grid-template-columns:repeat(5,[col] 1fr);
     row-gap: 5%;
