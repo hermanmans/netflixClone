@@ -51,13 +51,24 @@ a:visited { text-decoration: none; }
 }
 
 
-#movieGrid,#comingSoonGrid{
+#movieGrid{
     display: grid;
     grid-template-columns:repeat(5,[col] 1fr);
     row-gap: 5%;
     text-align: center;
 }
-
+#comingSoonGrid{
+    display: grid;
+    grid-template-columns:repeat(5,[col] 1fr);
+    text-align: center;
+}
+#heading2{
+    margin-top: 20%;
+    margin-left: 10px;
+}
+#heading1{
+    margin-left: 10px;
+}
 .icon-buttons{
     color: grey;   
 }
