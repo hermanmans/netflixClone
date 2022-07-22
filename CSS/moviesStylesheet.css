@@ -57,6 +57,18 @@ a:visited { text-decoration: none; }
     row-gap: 5%;
     text-align: center;
 }
+#icon,#icon2{
+    width:200px;
+    height:280px;
+    border: solid 2px gold;
+    transition:width 0.3s ease, height 0.3s ease;
+    transition-delay: 0.1s;
+}
+#icon,#icon2:hover{
+    width:250px;
+    height:330px;
+}
+
 #comingSoonGrid{
     display: grid;
     grid-template-columns:repeat(5,[col] 1fr);

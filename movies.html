@@ -28,21 +28,25 @@
     <div class="gridLayout">
             <h4 id="heading1" style="color: white;">New releases</h4>
             <div id="movieGrid">
-                <div class="icon" v-for="x in data" >
-                    <img v-bind:src="x.image" width=200px height=250px alt="" v-on:click ="show">
-                    <div class="icon-buttons">
-                        <i class="fa-solid fa-circle-play" id="play"></i>
-                        <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie" ></i>
-                        <i class="fa-solid fa-thumbs-up" id="like"></i>
-                    </div>
+                <div class="block1" v-for="x in data" >
+                    <img id="icon" v-bind:src="x.image"  alt="" v-on:click ="show">
+                        <div class="icon-buttons">
+                            <i class="fa-solid fa-circle-play" id="play"></i>
+                            <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie" ></i>
+                            <i class="fa-solid fa-thumbs-up" id="like"></i>
+                        </div>
                 </div>
             </div>
                 <h4 id="heading2" style="color: white;">Coming Soon</h4>
                 <div id="comingSoonGrid">
-                    <div class="icon" v-for="y in data" >
-                        <img v-bind:src="y.image" width=200px height=250px alt="">
+                    <div v-for="y in data" >
+                        <img id="icon2" v-bind:src="y.image" width=200px height=250px alt="">
+                        <div>COMING SOON!</div>
                     </div>
                 </div>
     </div>
+    <footer>
+        <br>
+    </footer>
 </body>
 </html>
