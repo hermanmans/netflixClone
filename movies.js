@@ -31,9 +31,18 @@ console.log(moviesObj);
 let newVueObj = new Vue({
   el:'#movieGrid',
   data:moviesObj,
+  newMovie:"",
+  watchlist:[],
   methods:{
-    addMovie(){
-      console.log("v-on works");
+    addMovie(w){
+      moviesObj.data.forEach(element => {
+        if(element.name === w){
+          newMovie = element;
+        }
+        console.log(newMovie);
+      });
+      //this.watchlist.push({label:this.newMovie});
+     
     },
   },
 });
