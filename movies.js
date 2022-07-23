@@ -37,8 +37,21 @@ let newVueObj = new Vue({
   el:'#movieGrid',
   data:moviesObj,
   methods:{
-    addMovie(){
+    addMovie(var1){
+      let choice = null;
+      this.data.forEach(element => {
+        if(element == var1){
+          choice = element
+        }
+      });
+  
+      let watchlist = [];
+      watchlist.push(choice);
+      let watchAPI = JSON.stringify(watchlist);
+      localStorage.setItem("toWatch",watchAPI);
       console.log("works");
+      console.log(choice);
+      console.log(watchAPI);
       //this.watchlist.push({label:this.newMovie});
     },
     show(){

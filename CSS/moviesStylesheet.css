@@ -64,7 +64,11 @@ a:visited { text-decoration: none; }
     transition:width 0.3s ease, height 0.3s ease;
     transition-delay: 0.1s;
 }
-#icon,#icon2:hover{
+#icon:hover{
+    width:250px;
+    height:330px;
+}
+#icon2:hover{
     width:250px;
     height:330px;
 }
