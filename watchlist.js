@@ -1,6 +1,6 @@
-let watchObj =JSON.parse(localStorage.getItem('toWatch'));
+let showList = JSON.parse(localStorage.getItem('toWatch'));
+console.log(showList);
 let newWatchObj = new Vue({
     el:'#watchGrid',
-    data:watchObj,
+    data:showList,
   });
-  

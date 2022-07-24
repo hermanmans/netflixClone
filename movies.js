@@ -8,7 +8,6 @@ function showBar(){
         searchBar.style.display = "none";
       }
 }
-
 searchPic.addEventListener("click",showBar);
 searchBar.addEventListener("keyup",function(event) {
   if (event.keyCode === 13){
@@ -44,19 +43,20 @@ let newVueObj = new Vue({
           choice = element
         }
       });
-  
-      let watchlist = [];
-      watchlist.push(choice);
-      let watchAPI = JSON.stringify(watchlist);
-      localStorage.setItem("toWatch",watchAPI);
-      console.log("works");
-      console.log(choice);
-      console.log(watchAPI);
-      //this.watchlist.push({label:this.newMovie});
+      let watchObj = {};
+      if(!localStorage.getItem("toWatch")){
+        Object.assign(watchObj,choice);
+        localStorage.setItem("toWatch",JSON.stringify(watchObj));
+      }else{
+        localStorage.getItem("toWatch");
+        Object.assign(watchObj,choice);
+        localStorage.setItem("toWatch", JSON.stringify(watchObj));
+        
+      }
+      console.log(watchObj);
     },
     show(){
       console.log("YEs");
-      //this.watchlist.push({label:this.newMovie});
     },
   },
 });

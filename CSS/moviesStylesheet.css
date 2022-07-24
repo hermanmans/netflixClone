@@ -57,12 +57,18 @@ a:visited { text-decoration: none; }
     row-gap: 5%;
     text-align: center;
 }
-#icon,#icon2{
+#watchGrid{
+    display: grid;
+    grid-template-columns:repeat(5,[col] 1fr);
+    row-gap: 5%;
+    text-align: center;
+}
+#icon,#icon2,#icon3{
     width:200px;
     height:280px;
     border: solid 2px gold;
     transition:width 0.3s ease, height 0.3s ease;
-    transition-delay: 0.1s;
+    transition-delay: 0.5s;
 }
 #icon:hover{
     width:250px;
@@ -86,7 +92,7 @@ a:visited { text-decoration: none; }
     margin-left: 10px;
 }
 .icon-buttons{
-    color: grey;   
+    color: grey;
 }
 
 #play:hover{
@@ -99,8 +105,18 @@ a:visited { text-decoration: none; }
     color:blue ;
 }
 
+
 #trailer{
     background-color: black;
     margin: auto;
     text-align: center;
+}
+#diagonal{
+    position: relative;
+    top: -50%;
+    left: 25%;
+    width: auto;
+    color: white;
+    border: solid 1px red;
+    width: max-content;
 }

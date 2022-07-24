@@ -34,6 +34,7 @@
                             <i class="fa-solid fa-circle-play" id="play"></i>
                             <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie(x)" ></i>
                             <i class="fa-solid fa-thumbs-up" id="like"></i>
+                            <i class="fa-regular fa-circle-trash" id="delete"></i>
                         </div>
                 </div>
             </div>
@@ -41,7 +42,7 @@
                 <div id="comingSoonGrid">
                     <div v-for="y in data" >
                         <img id="icon2" v-bind:src="y.image" width=200px height=250px alt="">
-                        <div>COMING SOON!</div>
+                        <div id="diagonal">COMING SOON!</div>
                     </div>
                 </div>
     </div>
