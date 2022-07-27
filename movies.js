@@ -31,26 +31,26 @@ comingSoonList = localStorage.getItem("comingData");
 let comingObj=JSON.parse(comingSoonList);
 console.log(comingObj);
 
-
+let watchObj = {};
 let newVueObj = new Vue({
   el:'#movieGrid',
   data:moviesObj,
   methods:{
     addMovie(var1){
-      let choice = null;
+      choice = null;
       this.data.forEach(element => {
         if(element == var1){
-          choice = element
+          choice = element;
         }
       });
-      let watchObj = {};
+      
       if(!localStorage.getItem("toWatch")){
-        Object.assign(watchObj,choice);
-        localStorage.setItem("toWatch",JSON.stringify(watchObj));
-      }else{
+        newby = Object.assign(watchObj,choice);
         localStorage.getItem("toWatch");
-        Object.assign(watchObj,choice);
-        localStorage.setItem("toWatch", JSON.stringify(watchObj));
+        localStorage.setItem("toWatch", JSON.stringify(newby));
+      }else{
+        newby = Object.assign(watchObj,choice);
+        localStorage.setItem("toWatch", JSON.stringify(newby));
         
       }
       console.log(watchObj);
