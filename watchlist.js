@@ -4,3 +4,5 @@ let newWatchObj = new Vue({
     el:'#watchGrid',
     data:showList,
   });
+
+  console.log(showList);

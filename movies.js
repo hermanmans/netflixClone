@@ -24,36 +24,29 @@ let comingSoon = '{"data":[{"id":1,"name":"1917","duration":"176","image":"/Imag
 localStorage.setItem("movieData",movies);
 moviesList = localStorage.getItem("movieData");
 let moviesObj=JSON.parse(moviesList);
-console.log(moviesObj);
 
 localStorage.setItem("comingData",comingSoon);
 comingSoonList = localStorage.getItem("comingData");
 let comingObj=JSON.parse(comingSoonList);
-console.log(comingObj);
 
-let watchObj = {};
+
+let watchArr = [];
 let newVueObj = new Vue({
   el:'#movieGrid',
   data:moviesObj,
   methods:{
     addMovie(var1){
-      choice = null;
       this.data.forEach(element => {
         if(element == var1){
           choice = element;
+          watchArr.push(choice);
+          console.log(watchArr);
+          localStorage.setItem("toWatch", JSON.stringify(watchArr));
         }
+
       });
-      
-      if(!localStorage.getItem("toWatch")){
-        newby = Object.assign(watchObj,choice);
-        localStorage.getItem("toWatch");
-        localStorage.setItem("toWatch", JSON.stringify(newby));
-      }else{
-        newby = Object.assign(watchObj,choice);
-        localStorage.setItem("toWatch", JSON.stringify(newby));
-        
-      }
-      console.log(watchObj);
+
+
     },
     show(){
       console.log("YEs");
@@ -65,4 +58,3 @@ let VueObj = new Vue({
   el:'#comingSoonGrid',
   data:comingObj,
 });
-
