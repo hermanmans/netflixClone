@@ -35,6 +35,16 @@ localStorage.setItem("comingData",comingSoon);
 comingSoonList = localStorage.getItem("comingData");
 let comingObj=JSON.parse(comingSoonList);
 
+let searchArray = [];
+let searchEvent = document.getElementById("searchInp");
+searchEvent.addEventListener("keyup",function(event) {
+  if (event.keyCode === 13){
+    let entry = (searchEvent.value);
+    searchArray.push(entry);
+    localStorage.setItem("searchHistory",JSON.stringify(searchArray));
+  };
+  });
+
 
 let watchArr = [];
 let newVueObj = new Vue({
@@ -51,8 +61,6 @@ let newVueObj = new Vue({
         }
 
       });
-
-
     },
     show(){
       console.log("YEs");
@@ -65,3 +73,8 @@ let VueObj = new Vue({
   data:comingObj,
 });
 
+for (s=0;s<comingObj.data.length;s++){
+  if(s.name == searchArray[0]){
+    console.log("yes");
+  }
+}
