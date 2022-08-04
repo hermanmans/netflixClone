@@ -43,8 +43,7 @@ searchEvent.addEventListener("keyup",function(event) {
     searchArray.push(entry);
     localStorage.setItem("searchHistory",JSON.stringify(searchArray));
   };
-  });
-
+});
 
 let watchArr = [];
 let newVueObj = new Vue({
