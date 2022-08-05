@@ -29,6 +29,9 @@ a:visited { text-decoration: none; }
     color: whitesmoke;
     margin-left: 5%;
 }
+#searchInp{
+    color: whitesmoke;
+}
 
 #movies:hover{
     color:grey ;
