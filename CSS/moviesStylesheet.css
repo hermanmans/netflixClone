@@ -5,7 +5,6 @@ font-family: Arial;}
 .navbar{
     display:flex;
     flex-direction: column;
-    justify-content:space-between 5px;
     color: whitesmoke;
     font-size: small;
     font-weight:100;
@@ -61,21 +60,22 @@ a:visited { text-decoration: none; }
 #heading1{
     text-align: center;
 }
-@media only screen and (min-width: 600px) {
-    #movieGrid{
-        display: grid;
-        grid-template-columns:repeat(5,[col] 1fr);
-        row-gap: 5%;
-        text-align: center;
-    }
-    #heading1{
-        text-align: left;
-        margin-left: 10px;
-    }
+#heading2{
+    text-align: center;
 }
+#heading3{
+    text-align: center;
+}
+#comingSoonGrid{
+    display: grid;
+    grid-template-columns:repeat(2,250px);
+    row-gap: 1%;
+    text-align: center;
+}
+
 #watchGrid{
     display: grid;
-    grid-template-columns:repeat(5,[col] 1fr);
+    grid-template-columns:repeat(2,250px);
     row-gap: 5%;
     text-align: center;
 }
@@ -99,27 +99,8 @@ a:visited { text-decoration: none; }
 #icon3:hover{
     transform: scale(1.1);
 }
-#heading2{
-    text-align: center;
-}
-#comingSoonGrid{
-    display: grid;
-    grid-template-columns:repeat(2,250px);
-    row-gap: 1%;
-    text-align: center;
-}
-@media only screen and (min-width: 600px) {
-    #comingSoonGrid{
-        display: grid;
-        grid-template-columns:repeat(5,[col] 1fr);
-        row-gap: 5%;
-        text-align: center;
-    }
-    #heading2{
-        text-align: left;
-        margin-left: 10px;
-    }
-}
+
+
 #across{
     position: relative;
     top: -50%;
@@ -158,4 +139,35 @@ a:visited { text-decoration: none; }
     text-align: center;
 }
 
-
+@media only screen and (min-width: 600px) {
+    #movieGrid{
+        display: grid;
+        grid-template-columns:repeat(5,[col] 1fr);
+        row-gap: 5%;
+        text-align: center;
+    }
+    #heading1{
+        text-align: left;
+        margin-left: 10px;
+    }
+    #comingSoonGrid{
+        display: grid;
+        grid-template-columns:repeat(5,[col] 1fr);
+        row-gap: 5%;
+        text-align: center;
+    }
+    #heading2{
+        text-align: left;
+        margin-left: 10px;
+    }
+    #watchGrid{
+        display: grid;
+        grid-template-columns:repeat(5,[col] 1fr);
+        row-gap: 5%;
+        text-align: center;
+    }
+    #heading3{
+        text-align: left;
+        margin-left: 10px;
+    }
+}

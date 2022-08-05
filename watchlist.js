@@ -7,11 +7,10 @@ let newWatchObj = new Vue({
         this.$data.forEach(element => {
           if(element == remove){
             choice = element;
-            console.log(element);
-            let newList = showList.splice(choice,1);
-            localStorage.setItem("toWatch", JSON.stringify(newList));
+            let index = showList.indexOf(choice)
+            showList.splice(index,1);
+            localStorage.setItem("toWatch", JSON.stringify(showList));
           };
-          console.log(showList);
         });
       },
     },
