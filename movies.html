@@ -41,7 +41,7 @@
                 <h4 id="heading2" style="color: white;">Coming Soon</h4>
                 <div id="comingSoonGrid">
                     <div v-for="y in data" >
-                        <img id="icon2" v-bind:src="y.image" width=200px height=250px alt="">
+                        <img id="icon2" v-if="y.is_coming_soon == 1" v-bind:src="y.image" width=200px height=250px alt="">
                         <div id="diagonal">COMING SOON!</div>
                     </div>
                 </div>
