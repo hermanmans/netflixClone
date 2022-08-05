@@ -3,16 +3,24 @@ background-color: black;
 font-family: Arial;}
 
 .navbar{
-    width:100% ;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between 5px;
     color: whitesmoke;
-    display: inline-flex;
-    position: relative;
-    align-items: center;
-    justify-content:left;
     font-size: small;
     font-weight:100;
+    border: solid 1px red;
 }
-
+@media only screen and (min-width: 900px) {
+    .navbar{
+        width:100% ;
+        color: whitesmoke;
+        display: inline-flex;
+        flex-direction: row;
+        font-size: small;
+        font-weight:100;
+    }
+}
 a:link { text-decoration: none; }
 
 
@@ -33,29 +41,37 @@ a:visited { text-decoration: none; }
 #watchlist:hover{
     color:grey ;
 }
-#search{
-    margin-left: 35%;
-}
+
 #search:hover{
     color:grey ;
 }
-#searchInp{
-    margin-left: 10px;
-    color: white;
-}
+
 #account{
     margin-left: 30px;
 }
 #account:hover{
     color:grey ;
 }
-
-
 #movieGrid{
     display: grid;
-    grid-template-columns:repeat(5,[col] 1fr);
-    row-gap: 5%;
+    grid-template-columns:repeat(2,250px);
+    row-gap: 1%;
     text-align: center;
+}
+#heading1{
+    text-align: center;
+}
+@media only screen and (min-width: 600px) {
+    #movieGrid{
+        display: grid;
+        grid-template-columns:repeat(5,[col] 1fr);
+        row-gap: 5%;
+        text-align: center;
+    }
+    #heading1{
+        text-align: left;
+        margin-left: 10px;
+    }
 }
 #watchGrid{
     display: grid;
@@ -64,38 +80,54 @@ a:visited { text-decoration: none; }
     text-align: center;
 }
 #icon,#icon2,#icon3,#icon4{
-    width:200px;
-    height:280px;
+    border-radius: 3%;
+    width:100%;
+    height:100%;
+    max-width:200px;
+    max-height:265px ;
     border: solid 2px gold;
-    transition:width 0.3s ease, height 0.3s ease;
-    transition-delay: 0.5s;
+    transition:0.2s ease;
+    transition-delay: 0.3s;
 }
 #icon:hover{
-    width:250px;
-    height:330px;
+    transform: scale(1.1);
 }
 #icon2:hover{
-    width:250px;
-    height:330px;
+    transform: scale(1.1);
 }
 
 #icon3:hover{
-    width:250px;
-    height:330px;
-}
-
-#comingSoonGrid{
-    display: grid;
-    grid-template-columns:repeat(5,[col] 1fr);
-    text-align: center;
+    transform: scale(1.1);
 }
 #heading2{
-    margin-top: 20%;
-    margin-left: 10px;
+    text-align: center;
 }
-#heading1{
-    margin-left: 10px;
+#comingSoonGrid{
+    display: grid;
+    grid-template-columns:repeat(2,250px);
+    row-gap: 1%;
+    text-align: center;
 }
+@media only screen and (min-width: 600px) {
+    #comingSoonGrid{
+        display: grid;
+        grid-template-columns:repeat(5,[col] 1fr);
+        row-gap: 5%;
+        text-align: center;
+    }
+    #heading2{
+        text-align: left;
+        margin-left: 10px;
+    }
+}
+#across{
+    position: relative;
+    top: -50%;
+    text-align: center;
+    color: white;
+    border: solid 1px red;
+}
+
 .icon-buttons{
     color: grey;
 }
@@ -125,13 +157,5 @@ a:visited { text-decoration: none; }
     margin: auto;
     text-align: center;
 }
-#diagonal{
-    position: relative;
-    top: -50%;
-    left: 25%;
-    width: auto;
-    color: white;
-    border: solid 1px red;
-    width: max-content;
-}
+
 
