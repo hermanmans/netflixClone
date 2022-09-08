@@ -65,6 +65,11 @@ let newVueObj = new Vue({
       console.log("YEs");
     },
   },
+  computed:{
+    sortedItems(){
+      return this.moviesObj.slice(0).reverse();/////
+    },
+  },
 });
 
 let VueObj = new Vue({

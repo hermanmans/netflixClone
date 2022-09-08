@@ -14,5 +14,10 @@ let newWatchObj = new Vue({
         });
       },
     },
+    computed:{
+      sortedItems(){
+        return showList.slice(0).reverse();
+      },
+    },
   });
 
