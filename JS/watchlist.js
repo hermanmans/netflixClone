@@ -16,7 +16,9 @@ let newWatchObj = new Vue({
     },
     computed:{
       sortedItems(){
-        return showList.slice(0).reverse();
+        return this.$data.slice(0).reverse();
+        //return this.data.slice(0).reverse();/////
+  
       },
     },
   });
