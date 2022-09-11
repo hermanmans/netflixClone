@@ -13,11 +13,12 @@
     <title>Search Results</title>
 </head>
 <body>
-    <div id="searchGrid">
+    <div id="searchGrid" >
         <nav class="navbar">
             <img src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px">
             <a id="movies" href="/HTML/movies.html"><h4 >Movies</h4></a>
             <a id="watchlist" href="/HTML/watchlist.html"><h4 >Watchlist</h4></a>
+            <a id="search" href="/HTML/search.html"><h4 >Search</h4></a>
             <i class="fa-solid fa-magnifying-glass" id="search"></i><input v-on:keyup.enter ="searchMovie(z)" id="searchInp">
             <h4 id="account">Account</h4>
         </nav>
@@ -25,7 +26,7 @@
             <h4 id="heading4" style="color: white;">Search Results</h4>
             
                 <div class="searchBlock" v-for="z in data" >
-                    <img id="icon4" v-bind:src="z.image"  alt="" v-on:click ="show">
+                    <img id="icon4" v-bind:src="z.image"  alt="">
                         <div class="icon-buttons">
                             <i class="fa-solid fa-circle-play" id="play"></i>
                             <i class="fa-solid fa-circle-plus" id="add"></i>
