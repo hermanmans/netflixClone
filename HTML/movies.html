@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="/CSS/moviesStylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/JS/search.js" defer></script>
     <script src="/JS/movies.js" defer></script>
     <script src="https://kit.fontawesome.com/76ccc9430c.js" crossorigin="anonymous" defer></script>
     
     <title>Movies</title>
 </head>
 <body>
+ <div id="moviePage">
     <nav class="navbar">
         <img src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px">
         <a id="movies" href="/HTML/movies.html"><h4 >Movies</h4></a>
         <a id="watchlist" href="/HTML/watchlist.html"><h4 >Watchlist</h4></a>
         <a id="search" href="/HTML/search.html"><h4 >Search</h4></a>
-        <i class="fa-solid fa-magnifying-glass" id="search"></i><input v-on:keyup.enter ="searchMovie(x)" id="searchInp">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i><input v-on:keyup.enter ="searchMovie(z)" id="searchInp">
         <h4 id="account">Account</h4>
     </nav>
     <div id="trailer">
         <video width="99%" height= "2%" controls>
-            <source src="Videos/Death on the Nile.mp4" type="video/mp4">
+            <source src="/Videos/Death on the Nile.mp4" type="video/mp4">
         </video>
     </div>
     <div class="gridLayout">
@@ -53,5 +55,6 @@
     <footer>
         <br>
     </footer>
+ </div>
 </body>
 </html>
