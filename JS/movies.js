@@ -46,6 +46,7 @@ searchEvent.addEventListener("keyup",function(event) {
 });
 
 let watchArr = [];
+let indexArr = []
 let newVueObj = new Vue({
   el:'#movieGrid',
   data:moviesObj,
@@ -65,8 +66,18 @@ let newVueObj = new Vue({
       console.log("YEs");
       
     },
+    liked(var2){
+      this.data.forEach(element => {
+        if(element == var2){
+          choice = element;
+          let block = this.data.indexOf(element);
+          console.log(block);
+          document.querySelector("#movieGrid").children[block].childNodes[0].children[1].children[2].style.color = "blue";
+          console.log("Works");
+        };
+      });
+    },
   },
-  
 });
 
 let VueObj = new Vue({

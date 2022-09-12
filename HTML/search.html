@@ -15,10 +15,10 @@
 <body>
     <div id="searchGrid" >
         <nav class="navbar">
-            <img src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px">
+            <img id="logo" src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px">
             <a id="movies" href="/HTML/movies.html"><h4 >Movies</h4></a>
             <a id="watchlist" href="/HTML/watchlist.html"><h4 >Watchlist</h4></a>
-            <a id="search" href="/HTML/search.html"><h4 >Search</h4></a>
+            <a id="searchPage" href="/HTML/search.html"><h4 >Search</h4></a>
             <i class="fa-solid fa-magnifying-glass" id="search"></i><input  v-on:keyup.enter ="searchMovie(z)" id="searchInp">
             <h4 id="account">Account</h4>
         </nav>

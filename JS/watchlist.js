@@ -10,6 +10,16 @@ let newWatchObj = new Vue({
             let index = showList.indexOf(choice)
             showList.splice(index,1);
             localStorage.setItem("toWatch", JSON.stringify(showList));
+            window.location.reload();
+          };
+        });
+      },
+      liked(){
+        this.$data.forEach(element => {
+          if(element == remove){
+            choice = element;
+            document.getElementById("like").style.color = "blue";
+            console.log("Works");
           };
         });
       },
