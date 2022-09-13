@@ -48,6 +48,8 @@ a:visited { text-decoration: none; }
 }
 #account{
     margin-left: 30px;
+    margin-top: 5px;
+    
 }
 #movies:hover{
     color:grey ;
@@ -103,8 +105,10 @@ a:visited { text-decoration: none; }
     transition:0.2s ease;
     transition-delay: 0.3s;
 }
-#icon:hover{
+.block1:hover{
     transform: scale(1.1);
+    transition:0.2s ease;
+    transition-delay: 0.3s;
 }
 #icon2:hover{
     transform: scale(1.1);
@@ -113,7 +117,6 @@ a:visited { text-decoration: none; }
 #icon3:hover{
     transform: scale(1.1);
 }
-
 
 #across{
     position: relative;
@@ -124,6 +127,9 @@ a:visited { text-decoration: none; }
 }
 
 .icon-buttons{
+    color: grey;
+}
+.icon-buttons:hover{
     color: grey;
 }
 
