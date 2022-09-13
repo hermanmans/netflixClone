@@ -62,10 +62,7 @@ let newVueObj = new Vue({
 
       });
     },
-    show(){
-      console.log("YEs");
-      
-    },
+    
     liked(var2){
       this.data.forEach(element => {
         if(element == var2){
@@ -76,6 +73,14 @@ let newVueObj = new Vue({
           console.log("Works");
         };
       });
+    },
+  },
+});
+let searchVue = new Vue({
+  el:'.navbar',
+  methods:{
+    show(){
+      window.location = "http://127.0.0.1:5500/HTML/search.html";
     },
   },
 });

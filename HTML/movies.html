@@ -19,7 +19,7 @@
         <a id="movies" href="/HTML/movies.html"><h4 >Movies</h4></a>
         <a id="watchlist" href="/HTML/watchlist.html"><h4 >Watchlist</h4></a>
         <a id="searchPage" href="/HTML/search.html"><h4 >Search</h4></a>
-        <i class="fa-solid fa-magnifying-glass" id="search"></i><input id="searchInp">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i><input v-on:click ="show" id="searchInp">
         <h4 id="account">Account</h4>
     </nav>
     <div id="trailer">
@@ -41,7 +41,7 @@
             <div id="movieGrid">
                 <div class="block1" v-for="x in data" >
                     <picture>
-                        <img id="icon" v-bind:src="x.image"  alt="" v-on:click ="show()">
+                        <img id="icon" v-bind:src="x.image"  alt="" >
                             <div class="icon-buttons">
                                 <i class="fa-solid fa-circle-play" id="play"></i>
                                 <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie(x)"  ></i>
