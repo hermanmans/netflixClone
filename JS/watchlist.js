@@ -14,15 +14,6 @@ let newWatchObj = new Vue({
           };
         });
       },
-      liked(){
-        this.$data.forEach(element => {
-          if(element == remove){
-            choice = element;
-            document.getElementById("like").style.color = "blue";
-            console.log("Works");
-          };
-        });
-      },
     },
     computed:{
       sortedItems(){

@@ -1,5 +1,5 @@
 ///Search event
-let searchPic = document.getElementById("search");
+/*let searchPic = document.getElementById("search");
 let searchBar = document.getElementById("searchInp");
 function showBar(){
     if (searchBar.style.display === "none") {
@@ -10,4 +10,5 @@ function showBar(){
 }
 
 searchPic.addEventListener("click",showBar);
+*/
 
