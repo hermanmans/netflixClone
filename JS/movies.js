@@ -77,13 +77,3 @@ let searchVue = new Vue({
   },
 });
 
-let VueObj = new Vue({
-  el:'#comingSoonGrid',
-  data:comingObj,
-});
-
-for (s=0;s<comingObj.data.length;s++){
-  if(s.name == searchArray[0]){
-    console.log("yes");
-  }
-}
