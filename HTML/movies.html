@@ -20,7 +20,18 @@
         <a id="watchlist" href="/HTML/watchlist.html"><h4 >Watchlist</h4></a>
         <a id="searchPage" href="/HTML/search.html"><h4 >Search</h4></a>
         <i class="fa-solid fa-magnifying-glass" id="search"></i><input v-on:click ="show" id="searchInp">
-        <h4 id="account">Account</h4>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown m-auto">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-bars fa-2xl"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" >Work Experience</a>
+                <a class="dropdown-item" >Education</a>
+                <a class="dropdown-item" >Hobbies and Interests</a>
+              </div>
+            </li>
+        </ul>
     </nav>
     <div id="trailer">
         <video width="99%" height= "2%" controls autoplay>
