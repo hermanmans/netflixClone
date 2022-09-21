@@ -1,5 +1,5 @@
 *{box-sizing: border-box;
-background-color: black;
+background-color: rgb(18, 18, 18);
 font-family: Arial;}
 
 .navbar{
@@ -28,6 +28,48 @@ a:visited { text-decoration: none; }
     color: whitesmoke;
     margin-left: 5%;
 }
+
+/* Slideshow container */
+.carousel-container {
+    text-align: center;
+    padding-bottom: 250px;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    color:#717171;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
 #watchlist{
     color: whitesmoke;
     margin-left: 5%;
@@ -94,7 +136,7 @@ a:visited { text-decoration: none; }
     height:100%;
     max-width:200px;
     max-height:265px ;
-    border: solid 2px gold;
+    border: solid 1px  rgb(20, 20, 20);
     transition:0.2s ease;
     transition-delay: 0.3s;
 }
