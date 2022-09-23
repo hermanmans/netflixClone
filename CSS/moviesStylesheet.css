@@ -32,7 +32,7 @@ a:visited { text-decoration: none; }
 /* Slideshow container */
 .carousel-container {
     text-align: center;
-    padding-bottom: 250px;
+    padding-bottom:550px;
   }
 
   /* Next & previous buttons */
@@ -112,7 +112,7 @@ a:visited { text-decoration: none; }
 #movieGrid{
     display: grid;
     grid-template-columns:repeat(2,250px);
-    row-gap: 1%;
+    row-gap: 2%;
     text-align: center;
 }
 #heading1{
@@ -127,23 +127,23 @@ a:visited { text-decoration: none; }
 #watchGrid{
     display: grid;
     grid-template-columns:repeat(2,250px);
-    row-gap: 5%;
+    row-gap: 3%;
     text-align: center;
 }
 #icon,#icon2,#icon3,#icon4,#searchResult{
     border-radius: 3%;
     width:100%;
     height:100%;
-    max-width:200px;
-    max-height:265px ;
+    width:200px;
+    height:265px ;
     border: solid 1px  rgb(20, 20, 20);
     transition:0.2s ease;
     transition-delay: 0.3s;
 }
 .iconComing{
     border-radius: 3%;
-    max-height:265px ;
-    width:fit-content
+    height:265px ;
+    width: 200px;
 }
 #skills_carousel{
     background-color: beige;
@@ -202,7 +202,7 @@ a:visited { text-decoration: none; }
     text-align: center;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 630px) {
     #movieGrid{
         display: grid;
         grid-template-columns:repeat(5,[col] 1fr);
@@ -218,6 +218,10 @@ a:visited { text-decoration: none; }
         grid-template-columns:repeat(5,[col] 1fr);
         row-gap: 5%;
         text-align: center;
+    }
+    .carousel-container {
+        text-align: center;
+        padding-bottom:285px;
     }
     #heading2{
         text-align: left;
@@ -235,3 +239,26 @@ a:visited { text-decoration: none; }
     }
 
 }
+@media only screen and (min-width: 1000px) {
+    .iconComing{
+        border-radius: 3%;
+        height:500px ;
+        width:380px;
+    }
+    .carousel-container {
+        text-align: center;
+        padding-bottom: 1020px;
+      }
+}
+@media only screen and (min-width: 1100px) {
+    .iconComing{
+        border-radius: 3%;
+        height:500px ;
+        width:380px;
+    }
+    .carousel-container {
+        text-align: center;
+        padding-bottom: 520px;
+      }
+}
+

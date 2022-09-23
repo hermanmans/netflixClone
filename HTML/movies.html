@@ -44,12 +44,18 @@
                         <div class="carousel-container">
                             <div class="carousel-item">
                                 <img class="iconComing" src="/Images/Coming/Animal Crackers.jpg" alt="">
-                            </div>
-                            <div class="carousel-item">
                                 <img class="iconComing" src="/Images/Coming/Avatar 2.jpg" alt="">
+                                <img class="iconComing" src="/Images/Coming/Tenet 2020.jpg" alt="">
                             </div>
                             <div class="carousel-item">
-                                <img class="iconComing" src="/Images/Coming/Tenet 2020.jpg" alt="">
+                                <img class="iconComing" src="/Images/Coming/Barbie.jpg" alt="">
+                                <img class="iconComing" src="/Images/Coming/Project Power.jpg" alt="">
+                                <img class="iconComing" src="/Images/Coming/Sea Fever.jpg" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="iconComing" src="/Images/Coming/The Hunger Games.jpg" alt="">
+                                <img class="iconComing" src="/Images/Coming/Wakanda Forever.jpg" alt="">
+                                <img class="iconComing" src="/Images/Coming/Puss in Boots.jpg" alt="">
                             </div>
                 <!--Carousel Arrow Buttons-->
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -64,7 +70,7 @@
             <div id="movieGrid">
                 <div class="block1"  v-for="x in data">
                     <picture>
-                        <img class="card" id="icon" v-bind:src="x.image"  alt="" >
+                        <img id="icon" v-bind:src="x.image"  alt="" >
                             <div class="icon-buttons">
                                 <i class="fa-solid fa-circle-play" id="play"></i>
                                 <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie(x)"  ></i>
