@@ -14,21 +14,22 @@
 </head>
 <body>
     <nav class="navbar">
-        <img id="logo" src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px">
-        <a id="movies" href="/HTML/movies.html"><h4 >Movies</h4></a>
-        <h4 id="account">Account</h4>
+        <a id="movies" href="/HTML/movies.html"><img id="logo" src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px"></a>
+        <a id="movies" href="/HTML/movies.html"><h6>Movies</h6></a>
     </nav>
 
     <div class="watchLayout">
             <h4 id="heading3" style="color: white;">Watchlist</h4>
             <div id="watchGrid">
                 <div class="watchBlock" v-for="y in sortedItems">
-                    <img id="icon3"  v-bind:src="y.image"  alt="">
-                        <div class="icon-buttons">
-                            <i class="fa-solid fa-circle-play" id="play"></i>
-                            <i class="fa-solid fa-thumbs-up" id="like"></i>
-                            <i class="fa-solid fa-trash-can" id="delete" v-on:click="removeMovie(y)"></i>
-                        </div>
+                    <picture>
+                        <img id="icon3"  v-bind:src="y.image"  alt="">
+                            <div class="icon-buttons">
+                                <i class="fa-solid fa-circle-play" id="play"></i>
+                                <i class="fa-solid fa-thumbs-up" id="like"></i>
+                                <i class="fa-solid fa-trash-can" id="delete" v-on:click="removeMovie(y)"></i>
+                            </div>
+                    </picture>
                 </div>
             </div>
     </div>

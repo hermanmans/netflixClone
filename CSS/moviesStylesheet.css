@@ -11,7 +11,7 @@ font-family: Arial;}
 }
 @media only screen and (min-width: 900px) {
     .navbar{
-        width:100% ;
+        width: 100%;
         color: whitesmoke;
         display: inline-flex;
         flex-direction: row;
@@ -24,9 +24,8 @@ a:link { text-decoration: none; }
 
 a:visited { text-decoration: none; }
 
-#movies{
+#movies,#watchlist,#searchInp,#searchPage,#account{
     color: whitesmoke;
-    margin-left: 5%;
 }
 
 /* Slideshow container */
@@ -69,30 +68,6 @@ a:visited { text-decoration: none; }
   .active, .dot:hover {
     background-color: #717171;
   }
-
-#watchlist{
-    color: whitesmoke;
-    margin-left: 5%;
-}
-#searchInp{
-    color: whitesmoke;
-    margin-left: 5%;
-}
-#searchPage{
-    color: whitesmoke;
-    margin-left: 5%;
-}
-#search{
-    margin-left: 5%;
-}
-#logo{
-    margin-left: 5%;
-}
-#account{
-    margin-left: 30px;
-    margin-top: 5px;
-    
-}
 #movies:hover{
     color:grey ;
 }

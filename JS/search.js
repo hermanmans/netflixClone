@@ -1,3 +1,6 @@
+window.onload = function() {
+  document.getElementById("searchInp").focus();
+}
 let selection = JSON.parse(localStorage.getItem("movieData"));
 let searchArr = [];
   let searchVueObj = new Vue({
@@ -18,6 +21,5 @@ let searchArr = [];
       },
     }
   });
-  
   
   

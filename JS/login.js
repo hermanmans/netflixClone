@@ -13,7 +13,7 @@ function saveLogin(){
   console.log(userObj);
   if(check===JSON.stringify(userObj)){
     alert("CORRECT");
-    window.location = "http://127.0.0.1:5500/HTML/index.html";
+    window.location = "http://127.0.0.1:5500/HTML/movies.html";
 
   }else{
     alert("Username or password incorrect, try again");
