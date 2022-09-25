@@ -15,7 +15,7 @@
 <body>
  <div id="moviePage">
     <nav class="navbar">
-        <img id="logo" src="/Images/Netflix.jpg" alt="Netflix Logo" width="200px" height ="180px" style="background-color:  rgb(18, 18, 18);">
+        <img id="logo" src="/Images/Netflix Edit.png" alt="Netflix Logo" width="200px" height ="180px" style="background-color:  rgb(18, 18, 18);">
         <a id="movies" href="/HTML/movies.html"><h6 >Movies</h6></a>
         <a id="watchlist" href="/HTML/watchlist.html"><h6 >Watchlist</h6></a>
         <a id="searchPage" href="/HTML/search.html"><h6 >Search</h6></a>
@@ -60,8 +60,11 @@
                 <div class="block1"  v-for="x in data">
                     <picture>
                         <img id="icon" v-bind:src="x.image"  alt="" >
+                        <video id="notAvailable" style="display:none;">
+                            <source src="/Videos/Video NA.mp4" autoplay>
+                        </video>
                             <div class="icon-buttons">
-                                <i class="fa-solid fa-circle-play" id="play"></i>
+                                <i class="fa-solid fa-circle-play" id="play" v-on:click="play(x)"></i>
                                 <i class="fa-solid fa-circle-plus" id="add" v-on:click="addMovie(x)"  ></i>
                                 <i class="fa-solid fa-thumbs-up" id="like" v-on:click="liked(x)"></i>   
                             </div>

@@ -35,8 +35,9 @@ searchEvent.addEventListener("keyup",function(event) {
 });
 
 let watchArr = [];
-let indexArr = []
-let likedArr = []
+let playArr = [];
+let indexArr = [];
+let likedArr = [];
 let newVueObj = new Vue({
   el:'#movieGrid',
   data:moviesObj,
@@ -63,6 +64,20 @@ let newVueObj = new Vue({
           console.log("Works");
           likedArr.push(choice);
           localStorage.setItem("likedMovies", JSON.stringify(likedArr));
+        };
+      });
+    },
+    play(var3){
+      this.data.forEach(element => {
+        if(element == var3){
+          choice = element;
+          let playBlock = this.data.indexOf(element);
+          playArr.push(choice);
+          localStorage.setItem("playedMovies", JSON.stringify(playArr));
+          let playIcon =document.querySelector("#movieGrid").children[playBlock].children[0].children[2].children[0];
+          playIcon.style.color = "green";
+          document.querySelector("#movieGrid").children[playBlock].children[0].children[0].style.display = "none";
+          document.querySelector("#movieGrid").children[playBlock].children[0].children[1].style.display = "block";
         };
       });
     },
