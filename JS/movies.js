@@ -47,7 +47,6 @@ let newVueObj = new Vue({
         if(element == var1){
           choice = element;
           watchArr.push(choice);
-          console.log(watchArr);
           localStorage.setItem("toWatch", JSON.stringify(watchArr));
         }
 
@@ -60,7 +59,7 @@ let newVueObj = new Vue({
           choice = element;
           let block = this.data.indexOf(element);
           console.log(block);
-          document.querySelector("#movieGrid").children[block].childNodes[0].children[1].children[2].style.color = "blue";
+          document.querySelector("#movieGrid").children[block].childNodes[0].children[2].children[2].style.color = "blue";
           console.log("Works");
           likedArr.push(choice);
           localStorage.setItem("likedMovies", JSON.stringify(likedArr));
