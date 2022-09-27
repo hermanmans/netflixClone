@@ -122,9 +122,8 @@ a:visited { text-decoration: none; }
     width:200px;
     height:265px ;
     border: solid 1px  rgb(20, 20, 20);
-    transition:5s ease;
-    transition-delay: 5s;
-    
+    transition:0.2s ease;
+    transition-delay: 0.3s;
 }
 .iconComing{
     border-radius: 3%;

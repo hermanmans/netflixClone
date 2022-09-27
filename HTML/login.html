@@ -7,21 +7,25 @@
     <script src="/JS/login.js" defer></script>
     <script src="https://kit.fontawesome.com/76ccc9430c.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="/CSS/stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     
     <title>Login</title>
     <!--username = developer; password = admin-->
 </head>
 <body>
-    <div class="login">
-        <label for="user">Username</label>
-            <input id="user" type="text">
-        <br>
-        <label for="password">Password</label>
-            <input id="password" type="password">
-        <br>    
-        <button id="loginButton" type="submit">Login</button>
-    </div>
+    <form class="login">
+        <h1 v-show="user" id="approved" style="display:none;">LOGIN SUCCESSFUL</h1>
+        <div class="entries">
+            <label for="user">Username</label>
+                <input id="user" type="text">
+            <br>
+            <label for="password">Password</label>
+                <input id="password" type="password">
+            <br>    
+            <button id="loginButton" type="submit">Sign In</button>
+        </div>
+    </form>
     
 </body>
 </html>

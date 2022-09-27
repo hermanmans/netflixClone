@@ -66,11 +66,12 @@ a:visited { text-decoration: none; }
     color: grey;
 }
 
-.login{
+.entries{
     color: white;
-    background-color: rgb(54, 54, 54);
+    background-color:rgb(5,3,4,0.8);
     padding: 40px;
-    border-radius: 5%;
+    padding-bottom: 200px;
+    border-radius: 1.5%;
     display:flex;
     flex-direction: column;
     width: fit-content;
@@ -81,8 +82,12 @@ a:visited { text-decoration: none; }
 
 #loginButton{
     font-weight: 500;
-    background-color: gray;
-    border: solid 1px black;
+    background-color: #E50914;
     color:whitesmoke;
-    border-radius: 12%;
+    border-radius: 1.5%;
+    width:189px;
+    height: 30px;
+}
+#approved{
+    color: white;
 }

@@ -11,14 +11,28 @@ function saveLogin(){
   userObj.user = userInp;
   userObj.password =passwordInp;
   console.log(userObj);
+  let testObj = new Vue({
+    el:'.login',
+    data:userObj,
+  });
   if(check===JSON.stringify(userObj)){
     alert("CORRECT");
-    window.location = "http://127.0.0.1:5500/HTML/movies.html";
-
+    userObj.user = true;
+    document.getElementById("approved").style.display = 'block';
+    document.querySelector(".entries").style.display = 'none';
+    setTimeout(function () {
+      window.location.href = "/HTML/movies.html"; //will redirect to your blog page (an ex: blog.html)
+   }, 2000); //will call the function after 2 secs.
   }else{
     alert("Username or password incorrect, try again");
+    userObj.user = false;
+    document.getElementById("approved").style.display = 'none';
+    location.reload();
   }
-  
+  console.log(testObj.$data.user);
 }
 
 login.addEventListener("click",saveLogin);
+
+
+
