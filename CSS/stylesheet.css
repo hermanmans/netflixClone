@@ -88,6 +88,16 @@ a:visited { text-decoration: none; }
     width:189px;
     height: 30px;
 }
+@keyframes approved {
+    20%{transform: translateY(100px)}
+  }
 #approved{
     color: white;
+    animation-name: approved;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
 }
+
+
+  
+    
