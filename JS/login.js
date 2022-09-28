@@ -22,7 +22,7 @@ function saveLogin(){
     alert("CORRECT");
     userObj.user = true;
     document.getElementById("approved").style.display = 'block';
-    //document.querySelector(".entries").style.display = 'none';
+    console.log(testObj.$data.user);
     setTimeout(function () {
       window.location.href = "/HTML/movies.html"; //will redirect to your blog page (an ex: blog.html)
    }, 2000); //will call the function after 2 secs.
@@ -31,8 +31,9 @@ function saveLogin(){
     userObj.user = false;
     document.getElementById("approved").style.display = 'none';
     location.reload();
+    console.log(testObj.$data.user);
   }
-  console.log(testObj.$data.user);
+  
 }
 
 login.addEventListener("click",saveLogin);

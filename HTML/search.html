@@ -21,16 +21,19 @@
             <i class="fa-solid fa-magnifying-glass" id="search"></i><input type="text" v-on:keyup.enter ="searchMovie()" id="searchInp">
         </nav>
         <h1 id="error"></h1>
-        <div class="searchLayout">
-            <h4 id="heading4" style="color: white;">Search Results</h4>
-            <div id="searchGrid">
-                <div class="searchBlock" style="display:none;">
-                    <img id="searchResult" v-bind:src=null alt="Searched Movie Result" >
-                        <div class="icon-buttons">
-                            <i class="fa-solid fa-circle-play" id="play"></i>
-                            <i class="fa-solid fa-circle-plus" id="add" ></i>
-                            <i class="fa-solid fa-thumbs-up" id="like"></i>
-                        </div>
+        <h4 id="heading4" style="color: white;">Search Results</h4>
+        <div id="resultGrid">
+            <div class="searchBlock" style="display:none;" v-for="x in data">
+                <div class="searchLayout">
+                            <img id="searchResult" v-bind:src=null alt="Searched Movie Result" >
+                            <video id="notAvailable" style="display:none;">
+                                <source src="/Videos/Video NA.mp4" type="video/mp4">
+                            </video>
+                                <div class="icon-buttons">
+                                    <i class="fa-solid fa-circle-play" id="play" v-on:click="play(x)"></i>
+                                    <i class="fa-solid fa-circle-plus" id="add" ></i>
+                                    <i class="fa-solid fa-thumbs-up" id="like"></i>
+                                </div>
                 </div>
             </div>
         </div>

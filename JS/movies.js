@@ -54,28 +54,42 @@ let newVueObj = new Vue({
     
     liked(var2){
       this.data.forEach(element => {
-        if(element == var2){
+        let block = this.data.indexOf(element);
+        let status = document.querySelector("#movieGrid").children[block].childNodes[0].children[2].children[2];
+        if(element == var2 && status.style.color == ''){
           choice = element;
-          let block = this.data.indexOf(element);
+          status.style.color = 'blue';
           console.log(block);
-          document.querySelector("#movieGrid").children[block].childNodes[0].children[2].children[2].style.color = "blue";
           console.log("Works");
           likedArr.push(choice);
           localStorage.setItem("likedMovies", JSON.stringify(likedArr));
+        }else{
+          status.style.color = '';
         };
       });
     },
     play(var3){
       this.data.forEach(element => {
-        if(element == var3){
+        let playBlock = this.data.indexOf(element);
+        let playIcon =document.querySelector("#movieGrid").children[playBlock].children[0].children[2].children[0];
+        let removeCard = document.querySelector("#movieGrid").children[playBlock].children[0].children[0];
+        let showNA = document.querySelector("#movieGrid").children[playBlock].children[0].children[1];
+        let vid = document.querySelector("#movieGrid").children[playBlock].children[0].children[1];
+        if(element == var3 && playIcon.style.color == ''){
           choice = element;
-          let playBlock = this.data.indexOf(element);
           playArr.push(choice);
           localStorage.setItem("playedMovies", JSON.stringify(playArr));
-          let playIcon =document.querySelector("#movieGrid").children[playBlock].children[0].children[2].children[0];
           playIcon.style.color = "green";
-          document.querySelector("#movieGrid").children[playBlock].children[0].children[0].style.display = "none";
-          document.querySelector("#movieGrid").children[playBlock].children[0].children[1].style.display = "block";
+          removeCard.style.display = "none";
+          showNA.style.display = "block";
+          vid.autoplay = true;
+          vid.load();
+        }else{
+          playIcon.style.color = '';
+          removeCard.style.display = "block";
+          showNA.style.display = "none";
+          vid.autoplay = false;
+          vid.load();
         };
       });
     },
