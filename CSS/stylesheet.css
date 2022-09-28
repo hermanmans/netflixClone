@@ -88,12 +88,14 @@ a:visited { text-decoration: none; }
     width:189px;
     height: 30px;
 }
-@keyframes approved {
-    20%{transform: translateY(100px)}
-  }
-#approved{
+@keyframes load {
+    100%{transform:rotate(720deg);}
+}
+#load{
+    margin-left: 50%;
+    margin-top: 25%;
     color: white;
-    animation-name: approved;
+    animation-name: load;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
 }

@@ -14,12 +14,15 @@ function saveLogin(){
   let testObj = new Vue({
     el:'.login',
     data:userObj,
+    created(){
+      document.getElementById("loginButton").innerHTML = "Logging In...";//-------------------add an new logo here
+    },
   });
   if(check===JSON.stringify(userObj)){
     alert("CORRECT");
     userObj.user = true;
     document.getElementById("approved").style.display = 'block';
-    document.querySelector(".entries").style.display = 'none';
+    //document.querySelector(".entries").style.display = 'none';
     setTimeout(function () {
       window.location.href = "/HTML/movies.html"; //will redirect to your blog page (an ex: blog.html)
    }, 2000); //will call the function after 2 secs.

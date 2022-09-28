@@ -49,7 +49,6 @@ let newVueObj = new Vue({
           watchArr.push(choice);
           localStorage.setItem("toWatch", JSON.stringify(watchArr));
         }
-
       });
     },
     
