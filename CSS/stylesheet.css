@@ -75,8 +75,6 @@ a:visited { text-decoration: none; }
     display:flex;
     flex-direction: column;
     width: fit-content;
-    margin: auto;
-    margin-top: 10%;
     align-items: center;
 }
 
@@ -88,11 +86,14 @@ a:visited { text-decoration: none; }
     width:189px;
     height: 30px;
 }
+.entries{
+    margin-left: 42%;
+    margin-top: 5%;
+}
 @keyframes load {
     100%{transform:rotate(720deg);}
 }
 #load{
-    margin-left: 50%;
     margin-top: 25%;
     color: white;
     animation-name: load;

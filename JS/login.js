@@ -15,7 +15,7 @@ function saveLogin(){
     el:'.login',
     data:userObj,
     created(){
-      document.getElementById("loginButton").innerHTML = "Logging In...";//-------------------add an new logo here
+      document.getElementById("loginButton").innerHTML = "Logging In...";
     },
   });
   if(check===JSON.stringify(userObj)){
@@ -25,7 +25,7 @@ function saveLogin(){
     console.log(testObj.$data.user);
     setTimeout(function () {
       window.location.href = "/HTML/movies.html"; //will redirect to your blog page (an ex: blog.html)
-   }, 2000); //will call the function after 2 secs.
+    }, 2000); //will call the function after 2 secs.
   }else{
     alert("Username or password incorrect, try again");
     userObj.user = false;

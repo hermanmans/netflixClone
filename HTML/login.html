@@ -15,7 +15,6 @@
 </head>
 <body>
     <form class="login">
-        <h1 v-show="user" id="approved" style="display:none;"><i class="fa-solid fa-spinner" id="load"></i></h1>
         <div class="entries">
             <label for="user">Username</label>
                 <input id="user" type="text">
@@ -23,7 +22,7 @@
             <label for="password">Password</label>
                 <input id="password" type="password">
             <br>    
-            <button id="loginButton" type="submit">Sign In</button>
+            <h1 v-show="user" id="approved" style="display:none;"><i class="fa-solid fa-spinner" id="load"></i></h1><button id="loginButton" type="submit">Sign In</button>
         </div>
     </form>
     
