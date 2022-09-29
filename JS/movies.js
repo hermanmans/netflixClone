@@ -44,7 +44,7 @@ let newVueObj = new Vue({
   methods:{
     addMovie(var1){
       this.data.forEach(element => {
-        if(element == var1){
+        if(element == var1 && watchArr.indexOf(element)===-1){
           choice = element;
           watchArr.push(choice);
           localStorage.setItem("toWatch", JSON.stringify(watchArr));
@@ -90,6 +90,7 @@ let newVueObj = new Vue({
           showNA.style.display = "none";
           vid.autoplay = false;
           vid.load();
+          ///get picture element and set to 200px!!
         };
       });
     },

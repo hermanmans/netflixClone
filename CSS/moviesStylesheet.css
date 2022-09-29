@@ -9,6 +9,14 @@ font-family: Arial;}
     font-size: small;
     font-weight:100;
 }
+.watchNavbar{
+    display:flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: small;
+    font-weight:100;
+    text-align: center;
+}
 .searchLayout{
     color: whitesmoke;
     font-size: small;
@@ -31,6 +39,7 @@ font-family: Arial;}
         font-weight:100;
         text-align: center;
     }
+
 }
 a:link { text-decoration: none; }
 
@@ -117,28 +126,16 @@ a:visited { text-decoration: none; }
     row-gap: 3%;
     text-align: center;
 }
-#icon,#icon2,#icon3,#icon4,#searchResult{
+#icon,#icon2,#icon3,#icon4,#searchResult,#notAvailable{
     border-radius: 3%;
     width:200px;
     height:265px ;
     border: solid 1px  rgb(20, 20, 20);
     transition:0.2s ease;
     transition-delay: 0.3s;
-}
-.icon-buttons{
-    width: 200px;
 }
 .search-buttons{
     text-align: center;
-}
-#notAvailable{
-    border-radius: 3%;
-    height:100%;
-    width:200px;
-    height:265px ;
-    border: solid 1px  rgb(20, 20, 20);
-    transition:0.2s ease;
-    transition-delay: 0.3s;
 }
 .iconComing{
     border-radius: 3%;
@@ -266,6 +263,6 @@ a:visited { text-decoration: none; }
     .carousel-container {
         text-align: center;
         padding-bottom: 520px;
-      }
+    }
 }
 
