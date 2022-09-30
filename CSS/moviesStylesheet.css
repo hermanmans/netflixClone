@@ -254,7 +254,18 @@ a:visited { text-decoration: none; }
         padding-bottom: 1020px;
       }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (width: 1165px) {
+    .iconComing{
+        border-radius: 3%;
+        height:500px ;
+        width:380px;
+    }
+    .carousel-container {
+        text-align: center;
+        padding-bottom: 1020px;
+    }
+}
+@media only screen and (min-width: 1166px) {
     .iconComing{
         border-radius: 3%;
         height:500px ;

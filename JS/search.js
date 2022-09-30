@@ -13,7 +13,7 @@ let playArr = [];
         this.data.forEach(element => {
           let searchResult = document.querySelector(".searchBlock");
           if(element.name.toLowerCase() == input){
-            search = element.name;
+            let search = element.name;
             searchArr.push(search);
             localStorage.setItem("searchHist",JSON.stringify(searchArr));
             document.getElementById("searchResult").src = element.image;
@@ -34,19 +34,19 @@ let playArr = [];
             localStorage.setItem("playedMovies", JSON.stringify(playArr));
             playIcon.style.color = "green";
             removeCard.style.display = "none";
-            showNA.style.display = "block";
+            showNA.style.display = "initial";
             vid.autoplay = true;
             vid.load();
           }else{
             playIcon.style.color = '';
-            removeCard.style.display = "block";
+            removeCard.style.display = "initial";
             showNA.style.display = "none";
             vid.autoplay = false;
             vid.load();
           };
         });
       },
-    }
-  });
-  
+    },
+  })
+
   
